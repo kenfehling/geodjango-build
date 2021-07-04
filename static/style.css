@@ -55,7 +55,7 @@ main.home > * {
 
 main.home h1 {
     text-align: center;
-    margin: 32px 0 0 0;
+    margin: auto;
     border-bottom: none;
 }
 
@@ -174,7 +174,7 @@ a:hover {
 
 .stub {
     display: inline-block;
-    width: 240px;
+    width: 160px;
     color: inherit;
     filter: grayscale(100%);
 }
@@ -265,12 +265,20 @@ figcaption {
     padding: 7px 10px;
 }
 
-.infobox tr:first-of-type > * {
-    padding-top: 10px;
+.infobox tbody:first-child tr:first-child > * {
+    padding-top: 8px;
 }
 
-.infobox tr:last-of-type > * {
-    padding-bottom: 10px;
+.infobox tbody:last-child tr:last-child > * {
+    padding-bottom: 7px;
+}
+
+.infobox .main-info tr:first-child > * {
+    padding-top: 8px;
+}
+
+.infobox .main-info tr:last-child > * {
+    padding-bottom: 6px;
 }
 
 .infobox th.title {
@@ -287,11 +295,14 @@ figcaption {
     margin: 0;
 }
 
-.infobox .place-image img, .infobox .place-image picture {
+.infobox img, .infobox picture {
     display: block;
-    height: 200px;
     width: 200px;
     margin: auto;
+}
+
+.infobox .place-image img, .infobox .place-image picture {
+    height: 200px;
 }
 
 .infobox .header {
