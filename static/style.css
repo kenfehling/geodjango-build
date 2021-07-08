@@ -54,8 +54,7 @@ main.home > * {
 }
 
 main.home h1 {
-    text-align: center;
-    margin: auto;
+    margin: 0 auto 25px auto;
     border-bottom: none;
 }
 
