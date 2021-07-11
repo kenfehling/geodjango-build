@@ -221,10 +221,18 @@ img.inline-img {
     box-sizing: border-box;
 }
 
+.figure-frame img {
+    width: 100%;
+}
+
 .figure-background {
     border: thin solid #EAECF0;
     background-color: white;
     display: flex;
+}
+
+.distro .figure-background {
+    padding: 12px 0;
 }
 
 figcaption {
