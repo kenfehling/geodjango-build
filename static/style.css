@@ -1,3 +1,10 @@
+:root {
+    --bar_bg_opacity: 0.1;
+    --bar_fg_opacity: 0.67;
+    --border-dark: #48494A;
+    --border-footer-dark: #5C5D5E;
+}
+
 html, body {
     padding: 0;
     margin: 0;
@@ -46,7 +53,6 @@ main {
 
 main.home {
     flex-direction: column;
-    text-align: center;
 }
 
 main.home > * {
@@ -54,8 +60,9 @@ main.home > * {
 }
 
 main.home h1 {
-    margin: 0 auto 25px auto;
+    text-align: center;
     border-bottom: none;
+    margin: auto;
 }
 
 header {
@@ -211,8 +218,7 @@ img.inline-img {
 }
 
 .figure {
-    order: 2;
-    display: flex;
+    display: inline-block;
 }
 
 .figure-frame {
@@ -231,8 +237,10 @@ img.inline-img {
     display: flex;
 }
 
-.distro .figure-background {
-    padding: 12px 0;
+.figure iframe {
+    width: 100%;
+    border: none;
+
 }
 
 figcaption {
@@ -344,24 +352,31 @@ code {
     display: inline-block;
 }
 
-@media screen and (max-width: 519px) { /* Mobile */
+.distro.figure iframe {
+    height: 273px;
+}
+
+@media screen and (max-width: 561px) { /* Mobile */
     article {
         display: flex;
         flex-direction: column;
     }
+    .infobox {
+        width: 100%;
+    }
     main ul {
-        margin: 0.5em 0 0 0;
+        margin: 0.5em 0 0 0.1em;
         padding: 0 0 0 1em;
     }
     main li {
         margin-bottom: 0.5em;
     }
-    .figure-frame {
+    .figure {
         width: 100%;
     }
 }
 
-@media screen and (min-width: 520px) { /* Desktop */
+@media screen and (min-width: 562px) { /* Desktop */
     .infobox {
         float: right;
         margin-left: 20px;
@@ -373,7 +388,7 @@ code {
     main li {
         margin-bottom: 0.1em;
     }
-    .figure-frame {
+    .figure {
         width: 280px;
         max-width: 100%;
     }
@@ -399,6 +414,13 @@ nav.categories .divider {
     font-weight: 200;
 }
 
+.viz-wrapper {
+    order: 2;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
 .viz {
     width: 100%;
     padding: 2px 16px 2px 8px;
@@ -406,6 +428,11 @@ nav.categories .divider {
 }
 
 .viz .bar {
+    box-sizing: border-box;
+    padding-right: 1rem;
+}
+
+.viz .bar > div {
     padding: 1px 0 1px 6px;
     overflow: visible;
     margin: 7px 0;
@@ -415,19 +442,35 @@ nav.categories .divider {
 }
 
 .viz .location {
-    background-color: rgba(255, 63, 160, 0.67)
+    background-color: rgba(255, 63, 160, var(--bar_bg_opacity));
 }
 
 .viz .neighbor {
-    background-color: rgba(63, 169, 245, 0.67);
+    background-color: rgba(63, 169, 245, var(--bar_bg_opacity));
 }
 
 .viz .city {
-    background-color: rgba(160, 100, 255, 0.67);
+    background-color: rgba(160, 100, 255, var(--bar_bg_opacity));
 }
 
 .viz .country {
-    background-color: rgba(255, 147, 30, 0.67);
+    background-color: rgba(255, 147, 30, var(--bar_bg_opacity));
+}
+
+.viz .location > div {
+    background-color: rgba(255, 63, 160, var(--bar_fg_opacity));
+}
+
+.viz .neighbor > div {
+    background-color: rgba(63, 169, 245, var(--bar_fg_opacity));
+}
+
+.viz .city > div {
+    background-color: rgba(160, 100, 255, var(--bar_fg_opacity));
+}
+
+.viz .country > div {
+    background-color: rgba(255, 147, 30, var(--bar_fg_opacity));
 }
 
 @media (prefers-color-scheme: dark) {
@@ -444,7 +487,7 @@ nav.categories .divider {
     }
 
     h1, h2 {
-        border-bottom: thin solid #444;
+        border-bottom: thin solid var(--border-dark);
     }
 
     footer a {
@@ -452,28 +495,27 @@ nav.categories .divider {
     }
 
     footer {
-        border-top: thin solid #444;
-
+        border-top: thin solid var(--border-footer-dark);
     }
 
     footer .site-title {
-        border-bottom: thin solid #444;
+        border-bottom: thin solid var(--border-footer-dark);
     }
 
     .figure-background {
-        border: thin solid #444;
+        border: thin solid var(--border-dark);
         background-color: #202122;
     }
 
     .infobox, .categories, .figure-frame {
-        border: 1px solid #444;
+        border: 1px solid var(--border-dark);
         background-color: #333;
     }
     .infobox th.title, .infobox .place-image {
-        border-bottom: 1px solid #444;
+        border-bottom: 1px solid var(--border-dark);
     }
 
     .infobox .header {
-        border-top: thin solid #444;
+        border-top: thin solid var(--border-dark);
     }
 }

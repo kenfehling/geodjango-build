@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/plot/static/css/main.7186f448.chunk.css",
+    "main.js": "/static/plot/static/js/main.286aee81.chunk.js",
+    "main.js.map": "/static/plot/static/js/main.286aee81.chunk.js.map",
+    "runtime-main.js": "/static/plot/static/js/runtime-main.3993e297.js",
+    "runtime-main.js.map": "/static/plot/static/js/runtime-main.3993e297.js.map",
+    "static/js/2.a364c5d1.chunk.js": "/static/plot/static/js/2.a364c5d1.chunk.js",
+    "static/js/2.a364c5d1.chunk.js.map": "/static/plot/static/js/2.a364c5d1.chunk.js.map",
+    "static/js/3.0c897238.chunk.js": "/static/plot/static/js/3.0c897238.chunk.js",
+    "static/js/3.0c897238.chunk.js.map": "/static/plot/static/js/3.0c897238.chunk.js.map",
+    "static/js/4.6133cff9.chunk.js": "/static/plot/static/js/4.6133cff9.chunk.js",
+    "static/js/4.6133cff9.chunk.js.map": "/static/plot/static/js/4.6133cff9.chunk.js.map",
+    "static/js/5.46b13311.chunk.js": "/static/plot/static/js/5.46b13311.chunk.js",
+    "static/js/5.46b13311.chunk.js.map": "/static/plot/static/js/5.46b13311.chunk.js.map",
+    "index.html": "/static/plot/index.html",
+    "static/css/main.7186f448.chunk.css.map": "/static/plot/static/css/main.7186f448.chunk.css.map",
+    "static/js/2.a364c5d1.chunk.js.LICENSE.txt": "/static/plot/static/js/2.a364c5d1.chunk.js.LICENSE.txt",
+    "static/js/3.0c897238.chunk.js.LICENSE.txt": "/static/plot/static/js/3.0c897238.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3993e297.js",
+    "static/js/3.0c897238.chunk.js",
+    "static/css/main.7186f448.chunk.css",
+    "static/js/main.286aee81.chunk.js"
+  ]
+}
